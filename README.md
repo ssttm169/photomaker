@@ -201,7 +201,7 @@ Only hexadecimal colors are supported:
 
 <br>
 
-# Buy me a cup of conffee
+# Buy me a cup of coffee
 
 The creative process is both challenging and time-consuming. If you could buy me a cup of coffee and give me some encouragement, it would help me continue to work hard and produce more valuable content. Thank you very much.
 
