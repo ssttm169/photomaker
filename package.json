@@ -1,6 +1,6 @@
 {
     "name": "photomaker",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "author": "Tom Tan <royongbin@gmail.com>",
     "homepage": "https://photomaker.itomtan.com",
     "description": "A Node.js image processing module, supports jpg, png, gif and other formats image resize and compression.",
@@ -11,11 +11,12 @@
         "dev": "npx rollup -wc rollup.config.dev.js",
         "build": "npm run clean && npm run build:types &&  npx rollup --config rollup.config.prod.js",
         "build:types": "tsc -b ./tsconfig.types.json",
-        "clean": "rimraf ./dist ./*.tsbuildinfo"
+        "clean": "rimraf ./dist ./*.tsbuildinfo",
     },
     "files": [
         "dist",
-        "README.md"
+        "README.md",
+        "README.zh_CN.md"
     ],
     "bin": {
         "photomaker": "dist/photomaker.js"
@@ -36,9 +37,16 @@
         "node": ">=14.15.0"
     },
     "funding": {
-        "url": "  https://www.buymeacoffee.com/tomtan119"
+        "url": "https://www.paypal.me/ssttm169"
     },
     "license": "ISC",
+    "dependencies": {
+        "sharp": "^0.32.1",
+        "url": "^0.11.1",
+        "glob": "^10.3.1",
+        "minimist": "^1.2.8",
+        "chalk": "^5.3.0"
+    },
     "devDependencies": {
         "@babel/core": "^7.22.8",
         "@babel/preset-env": "^7.22.7",
@@ -48,9 +56,8 @@
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@rollup/plugin-terser": "^0.2.1",
         "babel-plugin-transform-remove-console": "^6.9.4",
-        "chalk": "^5.3.0",
+        "execa": "^7.1.1",
         "glob": "^10.3.1",
-        "minimist": "^1.2.8",
         "rollup": "^2.79.1",
         "rollup-plugin-babel": "^4.4.0",
         "rollup-plugin-cleanup": "3.2.1",
@@ -66,10 +73,8 @@
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-typescript2": "^0.35.0",
         "rollup-plugin-uglify": "^6.0.4",
-        "sharp": "^0.32.1",
-        "shelljs": "^0.8.5",
-        "typescript": "^5.1.6",
-        "url": "^0.11.1"
+        "semver": "^7.5.4",
+        "typescript": "^5.1.6"
     },
     "bugs": {
         "url": "https://github.com/ssttm169/photomaker/issues"
